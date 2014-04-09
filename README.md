@@ -1,8 +1,10 @@
 Dal2Rpn
 =======
 
+计算普通四则运算表达式，操作符包括加减乘除以及括号。
+
 中缀表达式转化为后缀表达式
 
-JavaScrit 
+JavaScrit 版
 
-PHP
+PHP 版
