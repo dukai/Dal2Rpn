@@ -45,6 +45,10 @@ function dal2Rpn(exp){
 			}
 		}
 	}
+	if(prev != ''){
+		inputStack.push(prev);
+		prev = '';
+	}
 	while(inputStack.length > 0){
 		var cur = inputStack.shift();
 		if(isOperator(cur)){
