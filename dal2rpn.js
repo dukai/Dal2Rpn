@@ -24,11 +24,25 @@ function dal2Rpn(exp){
 	var inputStack = [];
 	var outputStack = [];
 	var outputQueue = [];
-
+	exp = exp.replace(/\s/g, '');
+	var cur = '', prev = '';
 	for(var i = 0, len = exp.length; i < len; i++){
 		var cur = exp[i];
-		if(cur != ' ' ){
-			inputStack.push(cur);
+		if(prev = ''){
+			if(isOperator(cur) || cur = 'v'){
+				inputStack.push(cur);
+			}else{
+				prev += cur;
+			}
+			
+		}else{
+			if(isOperator(cur) || cur = 'v'){
+				inputStack.push(prev);
+				inputStack.push(cur);
+				prev = '';
+			}else{
+				prev += cur;
+			}
 		}
 	}
 	while(inputStack.length > 0){
