@@ -1,4 +1,4 @@
 Dal2Rpn
 =======
 
-Convert Dal 2 RPN
+中缀表达式转化为后缀表达式
