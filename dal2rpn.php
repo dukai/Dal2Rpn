@@ -53,6 +53,10 @@ class ExpParser{
 				}
 			}
 		}
+		if(!empty($prev)){
+			$inputStack[] = $prev;
+			$prev = '';
+		}
 		
 		while (count($inputStack) > 0) {
 			$cur = array_shift($inputStack);
